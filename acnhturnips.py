@@ -32,8 +32,8 @@ for submission in subreddit.new(limit=10):
         if re.search("nook", submission.title, re.IGNORECASE):
             numString = ''
             for i in range(0,len(submission.title)):
-                if isinstance(submission[i],int) and len(numString) < 3:
-                    numString += submission[i]
+                if isinstance(submission.title[i],int) and len(numString) < 3:
+                    numString += submission.title[i]
 
             if int(numString) > 500:
                 # Reply to the post
