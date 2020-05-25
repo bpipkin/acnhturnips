@@ -39,6 +39,9 @@ for submission in subreddit.new(limit=10):
                 # Reply to the post
                 # submission.reply("I am interested! Can I please get your dodo code?");
 
+                print submission.title
+                print numString
+
                 # Store the current id into our list
                 posts_replied_to.append(submission.id)
 
