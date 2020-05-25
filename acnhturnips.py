@@ -35,7 +35,7 @@ for submission in subreddit.new(limit=10):
                 if isinstance(submission.title[i],int) and len(numString) < 3:
                     numString += submission.title[i]
 
-            if int(numString) > 500:
+            if len(numString) == 3 and int(numString) > 500:
                 # Reply to the post
                 # submission.reply("I am interested! Can I please get your dodo code?");
 
