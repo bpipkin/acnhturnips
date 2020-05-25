@@ -30,10 +30,10 @@ for submission in subreddit.new(limit=10):
 
         # Do a case insensitive search
         if re.search("nook", submission.title, re.IGNORECASE):
-            numString = ""
+            numString = ''
             for i in range(0,len(submission.title)):
                 if isinstance(submission[i],int) and len(numString) < 3:
-                    numString.append(submission[i])
+                    numString += submission[i]
 
             if int(numString) > 500:
                 # Reply to the post
